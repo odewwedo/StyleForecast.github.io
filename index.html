@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style Forecast</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- import google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<header id="main-header">
+    <img src="images/title.png" height=auto width="280"> <!-- logo title -->
+</header>
+
+<body>
+
+  <!-- section to hold user input -->
+<div class="section__container">
+    <div id="weather-container">
+
+    <h2 class="section_title">Enter the Temperature</h2>
+
+        <input type="number" id="temperature" style="width: 215px;" placeholder="Enter Temperature in Celsius">
+        <button onclick="submitTemperature()">Enter</button>
+
+        <p id="display">Your entered temperature will be displayed here.</p>
+
+
+    <h2 class="section__title">Select Your Conditions</h2>
+
+    <!-- dropdown menu for precipitation -->
+    <select id="precipitation">
+        <option value="Sunny"> Sunny </option>
+        <option value="Cloudy"> Cloudy </option>
+        <option value="Rainy"> Rainy </option>
+        <option value="Snowy"> Snowy </option>
+    </select>
+    
+        <!-- dropdown menu for condition -->
+    <select id="condition">
+        <option value="Windy"> Windy </option>
+        <option value="Breezy"> Breezy </option>
+        <option value="Still"> Still </option>            
+    </select>
+
+    <br> <!-- line break before button-->
+    <button type="button" onclick="getOutfit()" id="btnID">Get Outfit</button>
+    <br> <br>   
+    
+    </div>
+  </section>
+    <div class="section__container">
+      <h1 class="outfits" id="outfits">Outfits</h1>
+
+      <div class="musthave__grid">
+          <div class="musthave__card">
+            <span id="result1"> </span>  
+            </a>
+          </div>
+          <div class="musthave__card">
+            <span id="result2"> </span>  
+            </a>
+          </div>
+          <div class="musthave__card">
+            <span id="result3"> </span>  
+            </a>
+          </div>
+          <div class="musthave__card">
+            <span id="result4"> </span>  
+            </a>
+          </div>
+          <div class="musthave__card">
+            <span id="result5"> </span>  
+            </a>
+          </div>
+          <div class="musthave__card">
+            <span id="result6"> </span>  
+            </a>
+          </div>
+          <div class="musthave__card">
+            <span id="result7"> </span>  
+            </a>
+          </div>
+          <div class="musthave__card">
+            <span id="result8"> </span>  
+            </a>
+          </div>
+      </div>
+    </div>
+<script src="script.js"></script>
+
+<footer id="main-footer">
+  <p>Copyright &copy; 2024 egg</p>
+</footer>
+</body>
+</html>

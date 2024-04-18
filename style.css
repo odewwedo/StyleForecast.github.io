@@ -1,0 +1,242 @@
+body { /* background */
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Nanum Gothic';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200vh; /* make higher if picutres remove gradient thing */
+  margin: 0;
+}
+
+#main-header { /* top header with logo on it*/
+    position: fixed;
+    padding: 1rem 2rem; /* girth of header */
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: #bcd2ff; 
+    z-index: 1; /* keeps header as header despite scrolling */
+    opacity: 0.9;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+  }
+
+  #main-footer{
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  #weather-container { /* prompt container */
+      background: linear-gradient(to right top, #f4d8ff, #bcd2ff);
+      padding: 70px;
+      border-radius: 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.21);
+      text-align: center;
+  }
+  
+  .outfits {
+    display: none;
+  }
+
+  h1 {
+    color: #30445f;
+    font-family: 'Archivo';
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    position: relative;
+    padding-bottom: 1.5rem;
+  }
+  
+  h2 {
+      color: #30445f;
+      font-family: 'Archivo';
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 35px;
+      font-weight: 900;
+      position: relative;
+  }
+  
+  p { /* "you have entered: " temp message */
+    color: rgba(156, 156, 156, 0.567);
+    font-family: 'Nanum Gothic';
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    padding-top: 0.5rem;
+  }
+  
+  select { /* drop box */
+    color: #7b7b7b;
+    font-family: 'Nanum Gothic';
+    font-size: 14px;
+    position: relative;
+    border-style: none;
+    background-color: #f5f5f53b; /* inside rectangle colour*/
+    border: 0.5px solid white; /* rectangle border colour*/
+
+  }
+  
+  input { /* temp input, including box*/
+      width: calc(100% - 15px);
+      padding: 8px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 0.5px solid #ffffff; /* rectangle border colour*/
+      background-color: #f5f5f53b; /* inside rectangle colour*/
+      margin-top: 20px;
+      color: #303030; /* input colour */
+      font-family: 'Nanum Gothic';
+      font-size: 14px;
+  }
+  
+  button {
+      background: #f5f5f53b;
+      border: 0.5px solid white;
+      color: #7b7b7b;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100px;
+      font-size: 15px;
+      font-family: 'Nanum Gothic';
+  }
+  
+  button:hover {
+      background: #a2bbf2;
+  }
+  
+  #temp-div p {
+      font-size: 60px;
+      margin-top: -30px;
+  }
+  
+  :root {
+    --max-width: 1200px;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .section__container {
+    width: 1250px;
+    margin: auto;
+    padding: 8rem 1rem;
+  }
+
+    /* animations */
+  @keyframes slideInFromTop {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+  }
+  
+  .musthave__card img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+  }
+  
+  .musthave__nav a:hover {
+    color: var(--text-dark);
+  }
+  
+  .musthave__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .musthave__card {
+    display: grid;
+    gap: 0.5rem;
+    color: var(--text-dark);
+  }
+  
+  @media (width < 900px) {
+    header {
+      margin-top: 5rem;
+    }
+  
+    .sale__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .musthave__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  
+    .news__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .brands__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .instagram__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .footer__bar {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .copyright {
+      text-align: center;
+    }
+  
+    .footer__form {
+      justify-content: center;
+    }
+  }
+  
+  @media (width < 600px) {
+    .nav__links {
+      display: none;
+    }
+  
+    header {
+      margin-top: 0;
+    }
+  
+    .header__container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .header__image {
+      display: none;
+    }
+  
+    .sale__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .musthave__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .news__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .brands__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .footer__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
